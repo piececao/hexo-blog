@@ -22,3 +22,15 @@ F(j\omega) = \int_{-\infty}^{+\infty}f(t)e^{-j\omega t}dt
 {% mathjax %}
 F(X) = \sum_{n=0}^{N-1}f(n)e^{-\frac{j\omega}{N}n}
 {% endmathjax %}
+<br>
+{% mathjax %}
+\nabla = \left( \begin{array}{l}
+\frac{\partial}{\partial x_0} \\
+\frac{\partial}{\partial x_1} \\
+\frac{\partial}{\partial x_2} \\
+\frac{\partial}{\partial x_3} \\
+\vdots \\
+\frac{\partial}{\partial x_n} 
+\end{array}
+\right)
+{% endmathjax %}
