@@ -1,0 +1,46 @@
+index:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+post:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+archive:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+category:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+tag:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+about:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+page:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+links:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+page404:
+  banner_img: /img/bg/74958858_p0.webp
+  banner_mask_alpha: 0.45
+
+color:
+  navbar_bg_color: "#ff5975"
+  navbar_bg_color_dark: "#cc465d"
+
+favicon: /favicon.webp
+
+fun_features:
+  typing:
+    enable: true
+    scope: [home]
