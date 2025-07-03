@@ -1,3 +1,17 @@
+code:
+  copy_btn: true
+  highlight:
+    enable: true
+    line_number: true
+    lib: "highlightjs"
+    highlightjs:
+      style: 'a11y-light'
+      style_dark: 'a11y-dark'
+      bg_color: false
+    prismjs:
+      style: "default"
+      preprocess: true
+
 index:
   banner_img: /img/bg/74958858_p0.webp
   banner_mask_alpha: 0.45
