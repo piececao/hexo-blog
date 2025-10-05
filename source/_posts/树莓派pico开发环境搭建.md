@@ -29,17 +29,17 @@ PICO的主控室RP2040，具有：
 
 - 支持 UF2 的 USB 大容量存储启动模式，用于拖放式编程
 
-![树莓派Pico引脚图](assets/2025-02-19-16-13-37-image.png)
+![树莓派Pico引脚图](/assets/2025-02-19-16-13-37-image.png)
 
 # 烧录
 
 下载程序文件[blink.uf2](https://datasheets.raspberrypi.com/soft/blink.uf2)，按住pico板子上的“BOOTSEL”按键，然后用USB数据线把pico连接到电脑上，在电脑上就可以看到连接了一个USB设备“RPI-RP2”
 
-![](assets/2025-02-19-16-41-46-image.png)
+![](/assets/2025-02-19-16-41-46-image.png)
 
 把blink.uf2拖进去就可以烧录了。烧录完成USB会自动断开连接，板子开始执行程序文件。
 
-![](assets/2025-02-19-16-53-34-image.png)
+![](/assets/2025-02-19-16-53-34-image.png)
 
 # 搭建开发环境（简易版）
 
@@ -49,7 +49,7 @@ PICO的主控室RP2040，具有：
 
 **缺点：这种方式特别依赖网络，由于众所周知的原因，不建议使用这种方法** 
 
-![](assets/2025-02-19-18-12-08-image.png)
+![](/assets/2025-02-19-18-12-08-image.png)
 
 # 手动配置Pico SDK
 
@@ -64,33 +64,33 @@ CMake 到环境变量”(Add CMake to the PATH environment variable)。
 
 下载Visual Studio（用于nmake）
 
-![](assets/2025-03-03-13-49-16-f33299f0-28a4-4a5e-af45-bee6ccc6ae0f.png)
+![](/assets/2025-03-03-13-49-16-f33299f0-28a4-4a5e-af45-bee6ccc6ae0f.png)
 
 勾选“使用C++的桌面开发”
 
-![](assets/2025-03-02-22-36-57-image.png)
+![](/assets/2025-03-02-22-36-57-image.png)
 
 打开cmd(win+x -> 运行 -> 输入cmd -> 确定)，测试工具是否安装成功。
 
 输入`cmake`，回车
 
-![](assets/2025-03-02-22-38-04-image.png)
+![](/assets/2025-03-02-22-38-04-image.png)
 
 > 失败
 
-![](assets/2025-03-02-22-38-55-image.png)
+![](/assets/2025-03-02-22-38-55-image.png)
 
 > 成功
 
 输入`arm-none-eabi-gcc`，回车
 
-![](assets/2025-03-02-22-39-29-image.png)
+![](/assets/2025-03-02-22-39-29-image.png)
 
 > 成功
 
 安装[Python3](https://www.python.org/ftp/python/3.13.2/python-3.13.2-amd64.exe)
 
-![](assets/2025-03-02-22-41-47-image.png)
+![](/assets/2025-03-02-22-41-47-image.png)
 
 同样勾选添加到path
 
@@ -110,13 +110,13 @@ sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-n
 
 在pico-sdk的[github release](https://github.com/raspberrypi/pico-sdk/releases)页面下载pico-sdk-x.x.x.tar.gz，解压
 
-![](assets/2025-03-02-22-36-32-image.png)
+![](/assets/2025-03-02-22-36-32-image.png)
 
 ## 编译Picotool（Windows）
 
 在Github上下载[libusb](https://github.com/libusb/libusb/releases)并解压
 
-![](assets/2025-03-03-14-07-49-image.png)
+![](/assets/2025-03-03-14-07-49-image.png)
 
 打开“Developer Command Prompt for VS 2022”然后git clone一下picotool的源码：
 
@@ -136,13 +136,13 @@ nmake install
 
 nmake结束后，在picotool安装目录下可以看到一个picotool文件夹
 
-![](assets/2025-03-03-15-03-15-image.png)
+![](/assets/2025-03-03-15-03-15-image.png)
 
 # 创建新工程
 
 把pico-sdk目录下的`external/pico_sdk_import.cmake`复制到你的工程目录下
 
-![](assets/2025-03-02-22-36-08-image.png)就像这样
+![](/assets/2025-03-02-22-36-08-image.png)就像这样
 
 在工程目录下新建一个`CMakeLists.txt`，输入如下内容：
 
@@ -222,7 +222,7 @@ D:\Programs\hello>dir
 
 还是在Developer Command Prompt for VS 2022终端中打开项目的文件夹
 
-![](assets/2025-03-03-16-43-05-image.png)
+![](/assets/2025-03-03-16-43-05-image.png)
 
 然后敲命令编译：
 
@@ -238,16 +238,14 @@ nmake
 
 当出现这样的提示就说明nmake编译完成了
 
-![](assets/2025-03-03-16-46-47-image.png)
+![](/assets/2025-03-03-16-46-47-image.png)
 
 在build目录下就可以看到我们需要的uf2文件了
 
-![](assets/2025-03-03-16-47-43-image.png)
+![](/assets/2025-03-03-16-47-43-image.png)
 
 按住`BOOTSEL`连接pico，把uf2文件拖进去就可以编译了。
 
 程序中设置启用的是默认串口，即pico的1、2脚，波特率为115200，连接串口就会看到每隔一秒钟重复发送的`hello, world`。
 
-![](assets/2025-03-03-17-11-42-image.png)
-
-至此，pico开发环境搭建完成了（总算是完了...）
+![](/assets/2025-03-03-17-11-42-image.png)

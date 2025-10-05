@@ -2,6 +2,7 @@
 title: 测试hexo
 date: 2025-02-06 01:10:34
 tags: debug
+mathjax: true
 ---
 
 # 这是一个一级标题
